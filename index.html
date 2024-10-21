@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gráfico Personalizado</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+    
+    <section class="home-section" id="home">
+      <div class="home-bg"></div>
+      <div class="container">
+          <div class="row min-vh-100 align-items-center">
+              <div class="home-text">
+                  <h1>GraficosFam</h1>
+                  <p>Bem Vindo! <br>
+                    Site aonde você pode gerar graficos de forma mais rapido e eficiente!
+                  </p>
+                  <a href="#graficos" class="btn btn-default">Gerar Graficos</a>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <div class="container-graficos" id="graficos">
+      <h1>Gerador de Gráficos</h1>
+
+      <!-- Inserir título do gráfico -->
+      <label for="chartTitle">Título do Gráfico:</label>
+      <input type="text" id="chartTitle" placeholder="Insira o título"><br>
+
+      <!-- Inserir a quantidade de dados -->
+      <label for="dataCount">Quantidade de Dados:</label>
+      <input type="number" id="dataCount" min="1" value="1" onchange="createInputFields()"><br>
+
+      <!-- Contêiner para os campos de inserção de dados -->
+      <div id="inputsContainer"></div>
+
+      <!-- Botões para gerar os gráficos -->
+      <button onclick="drawChart('pie')">Gerar Gráfico de Pizza</button>
+      <button onclick="drawChart('bar')">Gerar Gráfico de Barras</button>
+
+      <!-- Contêiner onde o gráfico será desenhado -->
+      <div id="chart_div"></div>
+      <script src="./js/script.js"></script>
+    </div>
+  </body>
+</html>
